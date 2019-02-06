@@ -10,6 +10,7 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <Link to="/customers">Customers</Link>
+                    <Link to="/customers/30000000">Customers 30.000.000</Link>
                 </div>
             </Router>
         );
