@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import HomeContainer from './containers/HomeContainer';
+import CustomersContainer from './containers/CustomersContainer';
 
 class App extends Component {
     
@@ -11,7 +12,7 @@ class App extends Component {
     
     renderCustomerContainer = () => <h1>Customer Container</h1>;
     
-    renderCustomerListContainer = () => <h1>Customer List Container</h1>;
+    renderCustomerListContainer = () => <CustomersContainer/>;
     
     renderCustomerNewContainer = () => <h1>Customer New Container</h1>;
     
