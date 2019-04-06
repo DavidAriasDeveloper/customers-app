@@ -6,7 +6,7 @@ import AppFrame from './../components/AppFrame';
 import CustomersList from './../components/CustomersList';
 import CustomersActions from './../components/CustomersActions';
 import { fetchCustomers } from './../actions/fetchCustomers';
-import { getCustomers } from './../selectors/customers'
+import { getCustomers } from './../selectors/customers';
 
 class CustomersContainer extends Component {
     
@@ -22,7 +22,7 @@ class CustomersContainer extends Component {
         <div>    
             <CustomersList
                 customers={ customers }
-                urlPath={ 'customer/' } >
+                urlPath={ 'customers/' } >
             </CustomersList>
             <CustomersActions>
                 <button onClick={ this.handleAddNew }>Nuevo Cliente</button>
