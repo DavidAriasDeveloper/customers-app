@@ -19,3 +19,5 @@ CustomerData.propTypes = {
     dni: PropTypes.string.isRequired,
     age: PropTypes.number
 };
+
+export default CustomerData;

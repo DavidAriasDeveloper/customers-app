@@ -10,11 +10,12 @@
     "react-scripts": "^2.1.8",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.5",
+    "redux-form": "^8.2.0",
     "redux-promise": "^0.6.0",
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently --kill-others \"react-scripts start\" \"json-server db.json --host 0.0.0.0 --port 8082\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -27,5 +28,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
 }
