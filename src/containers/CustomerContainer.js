@@ -9,6 +9,7 @@ import { getCustomerByDni } from './../selectors/customers';
 import { Route, withRouter } from 'react-router-dom';
 import { fetchCustomers } from './../actions/fetchCustomers';
 import { updateCustomer } from './../actions/updateCustomer';
+import { SubmissionError } from 'redux-form';
 
 class CustomerContainer extends Component {
     
@@ -21,10 +22,18 @@ class CustomerContainer extends Component {
     handleSubmit = values => {
         console.log(JSON.stringify(values));
         const { id } = values;
-        this.props.updateCustomer(id, values);
+        return this.props.updateCustomer(id, values).then(r => {
+            if (r.error) {
+                throw new SubmissionError(r.payload);
+            }
+        });
     }
     
     handleOnBack = () => {
+        this.props.history.goBack();
+    }
+    
+    handleOnSubmitSuccess = () => {
         this.props.history.goBack();
     }
     
@@ -34,7 +43,8 @@ class CustomerContainer extends Component {
                 if(this.props.customer){
                     const CustomerControl = match ? CustomerEdit : CustomerData;
                     return <CustomerControl { ...this.props.customer } 
-                            onSubmit={ this.handleSubmit } 
+                            onSubmit={ this.handleSubmit }
+                            onSubmitSuccess={ this.handleOnSubmitSuccess }
                             onBack={ this.handleOnBack }/>
                 }
             
