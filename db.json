@@ -1,15 +1,9 @@
 {
   "customers": [
     {
-      "id": "30000001",
-      "dni": "30000001",
-      "name": "FACUNDO 2",
-      "age": 30
-    },
-    {
       "id": "500000",
       "dni": "500000",
-      "name": "CARLOS SANCHES",
+      "name": "CARLOS SANCHEZ",
       "age": 40
     },
     {
@@ -19,10 +13,28 @@
       "id": "XSCfaW5"
     },
     {
-      "name": "NUEVO CLIENTE 1",
-      "dni": "99999",
-      "age": 11,
-      "id": "kxmVQVd"
+      "id": "ubHO9pC",
+      "dni": "1231",
+      "name": "PEPITA PEREZ",
+      "age": 25
+    },
+    {
+      "id": "bngy5oB",
+      "dni": "2121",
+      "name": "JUANITA",
+      "age": 12
+    },
+    {
+      "id": "UvOwK94",
+      "dni": "31151",
+      "name": "CST",
+      "age": 8
+    },
+    {
+      "id": "GWPScKt",
+      "dni": "1214141",
+      "name": "SUMADRE",
+      "age": 22
     }
   ],
   "posts": [
