@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
 
 import HomeContainer from './containers/HomeContainer';
 import CustomersContainer from './containers/CustomersContainer';
@@ -19,7 +17,10 @@ class App extends Component {
     render() {
         return(
             <Router>
-                <div>
+                <div class="app">
+                    <div className="brand large">
+                        <h1>My Customers</h1>
+                    </div>
                     <Route exact path="/" component={ HomeContainer }/>
                     <Route exact path="/customers" component={ this.renderCustomerListContainer }/>
                     <Switch>

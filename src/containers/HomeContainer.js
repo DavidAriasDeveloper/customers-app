@@ -12,19 +12,22 @@ class HomeContainer extends Component {
     
     render() {
         return(
-            <div>
+            <>
                 <AppFrame
-                    header="Home"
+                    header="Bienvenido"
                     body={
-                        <div>
-                            Esta es la pantalla inicial
+                        <>
+                            Administra los clientes de tu negocio de la forma más rápida y sencilla posible desde la comodidad de tu oficina
                             <CustomersActions>
-                                <button onClick={this.handleOnClick}>Listado de clientes</button>
+                                <button class="primary" onClick={this.handleOnClick}>Listado de clientes</button>
                             </CustomersActions>
-                        </div>
+                        </>
                     }
                 ></AppFrame>
-            </div>
+                <footer>
+                    Esta es una aplicacion desarrollada por Luis David Arias Manjarrez
+                </footer>
+            </>
         );
     };
 };

@@ -1,0 +1,109 @@
+.app-frame {
+    grid-row: 2 / 3;
+    background: white;
+    box-shadow: 10px 10px 25px rgba(0,0,0,0.15);
+    border: 1px solid rgba(100,100,100,0.1);
+    border-radius: 10px;
+    margin: 0 20px;
+    padding: 0 1em 1em;
+}
+
+.brand {
+    grid-row: 1 / 2;
+}
+
+footer {
+  grid-row: 3 / 4;
+}
+
+.customers-actions {
+  padding: 10px 0;
+}
+
+.customers-actions button {
+  &.primary {
+    background-color: #2362ca;
+    background-image: linear-gradient(160deg,#23afca,#2362ca);
+    color: white;
+  }
+  
+  &.success {
+    background-color: #31921a;
+    background-image: linear-gradient(160deg, #5dca23, #31921a);
+    color: white;
+  }
+  
+  &.danger {
+    background-color: #dc0606;
+    background-image: linear-gradient(160deg, #f5109c, #dc0606);
+    color: white;
+  }
+  
+  border-width: 0px;
+  border-radius: 5px;
+  min-width: 100px;
+  padding: 10px;
+}
+
+.customers-list-item {
+  display: grid;
+  grid-template: auto / 8fr 2fr 2fr;
+  transition: background-color 0.4s;
+  
+  &:hover {
+    background-color: rgba(0,0,0,0.05);
+  }
+  
+  .field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    
+    a{
+      display: block;
+      width: 100%;
+    }
+    
+    &:nth-last-child(2){
+      text-align: center;
+      transition: background-color 0.3s;
+      
+      a {
+        color: #0f80e0;
+        transition: color 0.2s;
+      }
+      
+      &:hover {
+        a {
+          color: white;
+        }
+        background-color: #0f80e0;
+      }
+    }
+    
+    &:last-child {
+      text-align: center;
+      transition: background-color 0.3s;
+      
+      a {
+        color: #db2a2a;
+        transition: color 0.2s;
+      }
+      
+      &:hover {
+        a {
+          color: white;
+        }
+        background-color: #db2a2a;
+      }
+    }
+  }
+}
+
+.customer-data {
+  strong {
+    margin-right: 5px;
+  }
+}

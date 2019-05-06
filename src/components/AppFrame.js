@@ -4,13 +4,12 @@ import AppHeader from './AppHeader';
 
 const AppFrame = ({ header, body }) => {
     return (
-        <div>
+        <>
             <div className="app-frame">
                 <AppHeader title={ header } />
                 <div>{ body }</div>
-                <div>Aplicación simple de Ejemplo</div>
             </div>
-        </div>
+        </>
     );
 };
 

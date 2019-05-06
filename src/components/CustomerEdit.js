@@ -46,7 +46,7 @@ class CustomerEdit extends Component{
         const { name, dni, age, handleSubmit, submitting, onBack, pristine, submitSucceeded } = this.props;
         
         return (
-            <div>
+            <>
                 <h2>Edición del cliente</h2>
                 
                 <form onSubmit={ handleSubmit }>
@@ -87,7 +87,7 @@ class CustomerEdit extends Component{
                     
                     </Prompt>
                 </form>
-            </div>
+            </>
         );
     }
 }

@@ -70,11 +70,11 @@ class CustomerContainer extends Component {
     //<p>Datos del cliente "{ this.props.customer.name }"</p>
     render() {
         return(
-            <div>
+            <>
                 <AppFrame 
                     header={`Cliente ${ this.props.dni }`}
                     body={ this.renderBody() }></AppFrame>
-            </div>
+            </>
         );
     }
 }

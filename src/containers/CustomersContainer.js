@@ -28,18 +28,18 @@ class CustomersContainer extends Component {
                 urlPath={ 'customers/' } >
             </CustomersList>
             <CustomersActions>
-                <button onClick={ this.handleAddNew }>Nuevo Cliente</button>
+                <button class="success" onClick={ this.handleAddNew }>Nuevo Cliente</button>
             </CustomersActions>
         </div>
     );
     
     render(){
         return (
-            <div>
+            <>
                 <AppFrame
                     header={ 'Listado de clientes' }
                     body={ this.renderBody(this.props.customers) }></AppFrame>
-            </div>
+            </>
         );
     }
 }

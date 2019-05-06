@@ -40,10 +40,10 @@ class NewCustomerContainer extends Component {
     
     render(){
         return(
-            <div>
+            <>
                 <AppFrame header={'Creación de nuevo cliente'}
                         body={ this.renderBody() }></AppFrame>
-            </div>
+            </>
         );
     }
 }

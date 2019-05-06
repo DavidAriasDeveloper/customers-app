@@ -6,7 +6,7 @@ import { accessControl } from './../helpers/accessControl';
 
 const CustomerData = ({ id, name, dni, age, onBack, isDeleteAllow, onDelete }) => {
     return(
-        <div>
+        <>
             <div className="customer-data">
                 <h2>Datos del cliente</h2>
                 <div><strong>Nombre</strong><i>{ name }</i></div>
@@ -14,10 +14,10 @@ const CustomerData = ({ id, name, dni, age, onBack, isDeleteAllow, onDelete }) =
                 <div><strong>Edad</strong><i>{ age }</i></div>
             </div>
             <CustomersActions>
-                <button onClick={ onBack }>Volver</button>
-                { isDeleteAllow && <button onClick={ () => onDelete(id) }>Eliminar</button>}
+                <button class="primary" onClick={ onBack }>Volver</button>
+                { isDeleteAllow && <button class="danger" onClick={ () => onDelete(id) }>Eliminar</button>}
             </CustomersActions>
-        </div>
+        </>
     );
 };
 
